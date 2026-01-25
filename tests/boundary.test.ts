@@ -44,6 +44,19 @@ describe("env-boundary", () => {
     })
   
     expect(config.API_URL).toBe("https://example.com")
-  })  
+  }) 
+  
+  it("returns an immutable config object", () => {
+    process.env.API_URL = "https://example.com"
+  
+    const config = defineEnvBoundary({
+      API_URL: {
+        env: "API_URL",
+        schema: z.url(),
+      },
+    })
+  
+    expect(Object.isFrozen(config)).toBe(true)
+  })
   
 })
