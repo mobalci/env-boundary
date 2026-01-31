@@ -1,16 +1,34 @@
 {
   "name": "env-boundary",
   "version": "0.1.0",
-  "description": "",
+  "description": "Validate environment variables once and expose an immutable and typed config",
+  "author": "Mehmet Ömer Balcı",
   "license": "MIT",
-  "main": "index.js",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsup src/index.ts --dts",
+    "build": "tsup src/index.ts --dts --format esm",
     "test": "vitest"
   },
-  "keywords": [],
-  "author": "",
-  "type": "commonjs",
+  "keywords": ["nodejs", "environment", "library", "typescript", "validation", "config"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mobalci/env-boundary.git"
+  },
+  "homepage": "https://github.com/mobalci/env-boundary",
+  "bugs": {
+    "url": "https://github.com/mobalci/env-boundary/issues"
+  },
   "dependencies": {
     "zod": "^4.3.5"
   },
