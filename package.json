@@ -20,10 +20,17 @@
     "build": "tsup src/index.ts --dts --format esm",
     "test": "vitest"
   },
-  "keywords": ["nodejs", "environment", "library", "typescript", "validation", "config"],
+  "keywords": [
+    "nodejs",
+    "environment",
+    "library",
+    "typescript",
+    "validation",
+    "config"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mobalci/env-boundary.git"
+    "url": "git+https://github.com/mobalci/env-boundary.git"
   },
   "homepage": "https://github.com/mobalci/env-boundary",
   "bugs": {
