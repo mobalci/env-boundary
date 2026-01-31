@@ -2,6 +2,7 @@
   "name": "env-boundary",
   "version": "0.1.0",
   "description": "",
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
     "build": "tsup src/index.ts --dts",
@@ -9,7 +10,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
   "type": "commonjs",
   "dependencies": {
     "zod": "^4.3.5"
